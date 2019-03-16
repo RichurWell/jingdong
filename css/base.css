@@ -1,0 +1,467 @@
+/* 京东网页的公共页面放在这里面，首部，尾部也在这个里面 */
+* {
+     margin:0px;
+     padding: 0px;	
+     text-decoration: none;
+}
+body {
+	background-color: #F6F6F6;
+}
+.w {
+	width: 1190px;
+	margin:auto;
+}
+li {
+    list-style: none;
+}
+
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom:1;
+}
+
+
+ul {
+     margin: 0px;
+     padding: 0px;
+}
+.fr {
+	float: right;
+}
+.fl {
+	float: left;
+}
+/* 字体图标 */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?fq91d');
+  src:  url('../fonts/icomoon.eot?fq91d#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?fq91d') format('truetype'),
+    url('../fonts/icomoon.woff?fq91d') format('woff'),
+    url('../fonts/icomoon.svg?fq91d#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 京东顶部开始 */
+.J_event {
+	/* 通栏 */
+	/* height: 80px; */  /* 不需要高了，被孩子a撑开了 */
+	background-color: #000;
+}
+.J_event a{
+	/* 通栏里面的版心*/
+	display: block;
+	height: 80px;
+	background: url(../images/header.jpg) no-repeat;  /* 继承父亲w标签的居中 */
+	position: relative;
+}
+   /* 版心的删除字体图标 */
+.J_event a span {
+
+	height: 20px;
+	width: 20px;
+    font-family: 'icomoon';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background:rgba(0,0,0,0.3);
+    line-height: 20px;
+    text-align: center;
+}
+.style_red {
+	color: #f10215!important;
+}
+/* 京东顶部结束 */
+/* 京东快捷导航栏开始  */
+	.shortcut {
+		height: 30px;
+		background-color: #E3E4E5;
+		/* 下边框 */
+		border-bottom: 1px solid #DDDDDD; 
+        color: #9D9D9D;
+    	font-size: 12px;
+    	/* 垂直居中,行高会继承 */
+    	line-height: 30px;
+	}
+    .shortcut a {
+    	color: #9D9D9D;
+    	font-size: 12px;
+    	text-decoration: none;
+    }    
+	.shortcut .fr li {
+		float: left;
+	}
+
+	.shortcut .fl li i{
+		font-family: 'icomoon';
+		font-style: normal;
+		font-size: 14px;
+		color: #f10215;
+	}
+	.shortcut .fl li {
+		float: right;
+		margin-left: 200px;
+		overflow: hidden;
+	}
+
+	.spacer {
+		width: 1px;
+		height: 10px;
+		background-color: #ccc;
+		margin: 10px 10px 0;  /*  不能用padding会撑开盒子 */
+	}
+	.dropdown {
+		padding-right: 15px;
+		position: relative;
+	}
+	.dropdown i {
+		height: 10px;
+		width: 10px;
+		font-style: normal;
+		font-size: 16px;
+		font-family: 'icomoon';
+		position: absolute;
+		top: -2px;
+		right: -2px;
+	}
+	.erweima {
+		height: 60px;
+		width: 60px;
+		border:1px solid #ccc;
+		position: absolute;
+	}
+
+/* 京东快捷导航栏结束 */
+
+/* header 部分开始 */
+.header {
+	height: 140px;	
+}
+.inner {
+	height: 140px;
+	position: relative;
+}
+.logo {
+	width: 190px;
+	height: 170px;
+	position: absolute;
+	top: -31px;
+	left: 0px;
+	box-shadow: 0 -12px 10px rgba(0,0,0,0.2);
+}
+.logo h1 {
+	/* margin:0; */
+}
+.logo a {
+	display: block;
+	width: 190px;
+	height: 170px;
+	background:url(../images/logo.jpg) no-repeat;
+	margin-top: -20px;
+	text-indent: -999px;  /*  隐藏到logo的链接，跑出去，便于搜索 */
+}
+    /*  搜索部分 */
+    .search {
+    	height: 35px;
+    	width: 550px;
+    	position: absolute;
+    	top:25px;
+    	left: 320px;
+    	
+    }
+    .search input {
+    	width: 493px;
+    	height: 33px;
+    	border:1px solid #f10215;
+    	outline: none;  /* 取消蓝色边框 */
+    	padding-left:5px;
+    	color: #989898;
+    	float: left;
+    }
+    .search button {   	
+    	width: 50px;
+    	height: 35px;
+    	margin: 0px;
+    	padding: 0px;
+    	background-color: #f10215;
+    	outline: none;  /* 取消蓝色边框 */
+    	float: left;
+    	cursor: pointer;
+    }
+.search button i {
+	font-family: 'icomoon';
+	font-style: normal;
+	color: #fff;
+	font-size: 16px;
+}
+ .search em {
+ 	position: absolute;   /*自绝父绝，加了定位的盒子不需要给宽高了 */
+ 	top: 10px;
+ 	right: 65px;
+ 	width: 19px;
+ 	height: 15px;
+ 	background: url(../images/sprite-search.png) no-repeat;
+ 	cursor: pointer;
+ }
+ .searce em:hover {
+ 	background-position: -30px 0: 
+ } 
+   /* 热词部分 */
+  .hotwords {
+  	position: absolute;
+  	top: 50px;
+  	left: 0px;
+  }
+  .hotwords a {
+  	color: #9E9B99;
+  	font-size: 12px;
+  }
+  .hotwords a:hover {
+  	color: #f10215;
+  	font-size: 12px;
+
+  }
+/*   购物车 */
+.myCar {
+	width: 188px;
+	height: 33px;
+	border:1px solid #ccc;
+	position: absolute;   /* 购物车位置靠定位确定 */
+	top: 25px;
+	right: 100px;
+	line-height: 33px;
+	text-align: center;
+
+}
+.myCar a {
+	
+	font-size: 14px;
+	color:#f10215;
+    
+
+}
+.myCar i {
+	font-family: 'icomoon';
+	font-style: normal;
+	color:#f10215;
+	margin-right: 8px;
+}
+.s{
+	margin:0;
+	padding: 0;
+}
+.myCar s {
+	position: absolute;
+	top: 5px;
+	left: 150px;
+	text-decoration: none;
+	color: white;
+	background-color:#f10215; 
+	height: 16px;
+	line-height: 16px; 
+	font-size: 12px;
+	padding: 0 3px;
+	border-radius: 7px;
+
+}
+.computer {
+	position: absolute;
+	right: 0px;
+	bottom: 10px;
+
+}
+.navitems {
+	position: absolute;
+	/* 不需要给大小，绝对定位于内容有关 */
+	left: 200px;
+	bottom: 0px;
+}
+.navitems ul {
+	float: left;  /*  让ul盒子浮动起来，与logo在同一行 */
+}
+.navitems ul li{
+	 float: left;  /*  li 浮动起来 */
+	 /* 每一个小的li左边30px */
+	 margin-left: 30px;
+}
+.navitems  li a {
+	font-size: 16px;
+	color: #555A5F;
+	font-weight: 700; 
+	height: 40px;
+	line-height: 40px;
+	display: block;  /* 将a转换成块 */
+
+}
+.navitems  li a:hover {
+	color: #f10215;
+}
+   /* 增加权重，覆盖上面的space */
+ .navitems .spacer {
+ 	float: left;   
+ 	margin-top: 15px;
+ 	margin-left: 20px;
+ 	margin-right:-10px;
+ }
+
+/* header 部分结束 */
+
+
+
+/* footer开始了 */
+   .footer {
+   	  /*  通栏不设置宽度 */
+   	  height: 560px;    /* 底部总高度 */
+      background-color: #EAEAEA;
+   }
+   .footer_service {
+   	  height: 100px;  
+   	  border-bottom: 1px solid #DEDEDE;    /* 底线颜色 */
+   }
+   .footer_service_inner {
+   	/*   background-color: pink; */
+   	  padding: 30px 0;  /* 上下30 左右0 */
+   }
+  .footer_service_inner li {
+  	 float: left;   /* 有了浮动，就没有高度，清除浮动才能撑开盒子 */
+  	 width: 297px;
+  	 height: 42px;
+
+  }
+  .service_unit {
+  	 width: 225px;
+  	 height: 42px;
+  	 margin:0 auto;
+  	 position: relative;  /* h5的亲父亲 */
+  }
+  .service_unit h5{
+  	 width: 36px;
+  	 height: 43px;
+  	 position: absolute;
+  	 top: 0;
+  	 left: 0;
+  	 background: url(../images/ico.png);
+  	 text-indent: -9999px;
+  }
+  .service_unit p{
+  	  line-height: 42px;
+  	  margin-left: 45px;
+  	  font-size: 18px;
+  	  font-weight: 700;
+  }
+ .service_unit .quick {
+ 	/* background-position:0 -43px;精灵图垂直下移43px */
+ 	background-position:0 -43px;  /* 权重太低，被层叠了  前面加个h5增加权重 */
+ }
+  .service_unit .good {
+ 	background-position:0 -86px;  /* 权重太低，被层叠了  前面加个h5增加权重 */
+ }
+  .service_unit .sheng {
+ 	background-position:0 -128px;  /* 权重太低，被层叠了  前面加个h5增加权重 */
+ }
+
+   /* 帮助模块开始 */
+   .help {
+   	   height: 200px;
+   	   padding-top: 20px;
+
+   }
+   .help dl {
+   	  float: left;
+   	  width: 195px; 
+   }
+
+  .help dt {
+  	font-size: 14px;
+  	font-weight: 700;
+  	color: #666;
+  	height: 30px;
+  	
+
+  }
+
+    a{
+   	  text-align: center;
+  	  color: #727272;
+  	  font-size: 12px;
+
+  }
+  .help dd  a:hover {
+  	color: #f10215;
+  }
+  .help  .cover {
+  	float: right;
+  	width: 207px;
+  	height: 150px;
+  	background: url(../images/ico_footer.png) no-repeat;
+  }
+  .help .info {
+      width: 175px;
+  	  height: 50px;
+  	  font-size: 12px;
+  	  margin-top: 5px;
+  	  margin-left: 10px;
+  }
+ .cover .more {
+  	text-align: right;
+  	padding-right: 10px;
+  }
+   /* 帮助模块结束 */
+  .copyright {
+  	 border-top: 1px solid  #ccc;
+  	 padding-top: 15px;
+  }
+  .links {
+  	 text-align: center;
+  }
+  .links a {
+  	color: #727272;
+  	font-size: 12px;
+
+  }
+  .links span{
+  	font-size: 12px;
+  	color: #D4CDCD;
+  }
+
+  .c_info {
+  	font-size: 12px;
+  	color: #9E9E9B;
+  	text-align: center;
+  	line-height: 20px;
+  	margin-top:10px;
+  }
+  .tupian {
+  	text-align: center;
+  }
+  .tupian a {
+  	 width: 103px;
+  	 height: 32px;
+  	 display:inline-block;
+  	 background: url(../images/ico_footer.png) no-repeat 0 -151px;
+
+  }
+  .tupian .kexi {
+  	background-position: -104px -151px;
+  }
+  .tupian .wj {
+  	background-position: 0 -183px;
+  }
+  .tupian .cx {
+  	background-position: -104px -183px;
+  }
+  .tupian .jb {
+  	background-position: 0px -215px;
+  }
+  .tupian .xz {
+  	background-position: -104px -215px;
+  }
+/* footer结束了 */

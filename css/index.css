@@ -1,0 +1,282 @@
+/* 京东首页的CSS */
+*{
+	margin:0px;
+	padding: 0px;
+}
+.jd {
+	/* height: 480px; */
+	/* background-color: pink; */
+	position: relative;
+}
+.jd_inner{
+    height: 480px;
+    /* background-color: skyblue; */
+    position: relative;  /* 全是定位就有层级，想要与广告较量，得先到同一级别，定位最高级 */
+    z-index: 1;   /* 内容压住广告,不能让广告压着内容，只有定位的盒子才有资格用index */
+}
+  .jd .ad {
+	height: 480px; 
+	background:url(../images/bg.png) no-repeat top center; 
+	position: absolute;  /* 加了定位的盒子，自动转为行内块，根据内容定义宽度了 */
+	top: 0;
+	left: 0;
+	width: 100%;  /* 一定要写，根据内容多少订宽度 */
+	z-index: 0;
+}
+.ad a {
+	display: block;
+	height: 100%;
+}
+.jd_clo1 {
+	width: 190px;
+	height: 480px;
+	float: left;
+	 background-color: black; 
+}
+.jd_clo2 {
+	width: 790px;
+	height: 480px;
+	float: left;
+	margin-left: 10px;
+/* 	background-color: purple; */
+}
+.jd_clo3 {
+	width: 190px;
+	height: 480px;
+	float: right;
+	/* background-color: orange; */
+}
+.jd_clo1 li {
+	
+	height: 28px;
+	line-height: 28px;	
+}
+.jd_clo1 li a {
+   color: #fff;
+   font-size: 14px;
+}
+.jd_clo1 span {
+	color: #fff;
+}
+.jd_clo1 li:hover {
+	background-color: #999395;
+}
+/* 中间的上半部分 */
+.jd_clo2_hd {
+	height: 340px;
+	width: 790px;		
+	float: left;
+	position: relative;
+}
+.jd_clo2_hd img {
+	margin-left: -5px;
+	margin-top: -5px;
+}
+
+/* 中间的下半部分 */
+.jd_clo2_bd div {
+	width: 390px;
+	height: 130px;
+	background-color: yellow;
+	float: right;
+	margin-top: 10px;
+} 
+
+.jd_clo2_bd div img{
+	
+	width: 100%;
+
+} 
+.jd_clo2_bd  .firstpic {
+   float: left; 
+   margin-right: 10px;
+
+}
+  /* 中间部分的左右箭头 */
+.jd_clo2_hd .arr-l ,.arr-r{
+   position: absolute;
+   top: 50%;   /* 垂直居中 */
+   margin-top: -30px; 
+   width: 30px;
+   height: 60px;
+   background: rgba(0,0,0,0.3);
+   font-family: "icomoon";
+   color: #fff;
+   text-align: center;     /* 水平居中 */
+   line-height: 60px;        /* 垂直居中*/
+   font-size: 16px; 
+   z-index: 0px;
+}
+.arr-l{
+	left: 0;
+	
+}
+.arr-r {
+	right: 0;
+
+}
+   /* 小圆点的背景框子 */
+.jd_clo2_hd ol{
+	 position: absolute;
+	 bottom: 20px;
+	 left: 50%;
+	 margin-left: -90px;
+	 width: 180px;
+	 height: 20px;
+	 background:rgba(255,255,255,0.3);
+	 border-radius: 10px;  /* 圆角 */
+}
+  /* 六个小圆点 */
+.jd_clo2_hd li {
+	width: 12px;
+	height: 12px;
+	background-color: #fff;
+	border-radius:50%;
+	margin:4px 5px;
+	float: left;
+	cursor: pointer; 
+}
+  /* 小圆点默认的第一个标红 */
+.jd_clo2_hd .current {
+	background-color: #f10215;
+}
+
+/* 中间模块结束 */
+
+/* 右边模块开始 */
+   .user {
+   	height: 115px;
+   	background-color: pink;
+   	padding: 20px 10px 0px 10px;
+
+
+   }
+   .news {
+   	   height: 134px;
+   	   border-top: 1px solid #
+   }
+  
+   /* 将文字给个padding挤到右边，图片定位在右边。省的两个盒子麻烦 */
+   .user_info {
+   	height: 40px;
+   	padding-left: 50px;
+   	font-size: 12px;
+   	color: #747474;
+   	line-height: 22px;
+   	position: relative;
+   
+   }
+   .user_info  a {
+   		font-size: 12px;
+   	color: #747474;
+   } 
+    .jd_service{
+   	  height: 209px;
+   	  overflow: hidden;   /* 将多余的切了，就可以看不到边框了 */
+   
+   }
+   .info-img  img{
+   	width: 40px;
+   	height: 40px;
+   	position: absolute;
+   	top:0;
+   	left: 0;
+   	border-radius: 50%;
+   }
+    /* 下半边 */
+    .user_profit {
+       margin-top: 14px;
+    }
+     /* 新人福利   */
+    .user_profit a{
+    	width: 70px;
+        height: 20px;
+        border:1px solid #f10215;
+        display: inline-block;
+        font-size: 12px;
+        color: #f10215;
+        text-align: center;
+        line-height: 20px;  
+        margin-left: 5px;
+    }
+    .user_profit a:hover {
+    	background-color: #f10215;
+    	color: #fff;
+    }
+  /*   新闻模块 */ 
+       .tab-hd {
+       	border-bottom: 1px solid #ccc;
+       	padding: 3px 0;
+       	position: relative;
+
+       }
+       .tab-hd a {
+       	 font-size: 12px;
+       	 color: #747474;  
+       }
+       .cuxiao {
+       	  border-right: 1px solid #ccc;
+       	  padding-right: 10px;
+       	  padding-left: 5px;
+       }
+       .gonggao {
+       	  padding-left: 5px;
+       }
+       .news .more1 {
+       	  position: absolute; 
+       	  top: 6px;
+       	  right: 0px;
+
+       }
+       .line {
+       	  width: 28px;
+       	  height: 2px;
+       	  background-color: #f10215;
+       	  position: absolute;
+       	  left: 0px;
+       	  bottom: -1px;
+
+       }
+        .tab-bd {
+        	margin-top: 10px;
+        }
+       .tab-bd li{ 
+       	height: 23px
+       	line-height: 23px;
+           
+       }
+        .jd_service {
+        	width: 190px; 
+        }
+        
+
+        .jd_service ul {
+        	width: 195px;
+
+        }
+       .jd_service li {
+       	  width: 47px;
+       	  height: 69px;
+       	 /*  background-color: purple; */
+       	  float: left;
+       	  border-right: 1px solid #ccc;
+       	  border-bottom: 1px solid #ccc;
+
+       }
+       .jd_service li a {
+       	  width: 100%;
+       	  height: 100%;  /* 根据父亲 */
+       	 /*  height: auto;  针对 字的的高度和宽度 */
+       	 display: block;
+       }
+       .jd_service  i {
+       	  display: block;
+       	  width: 24px;
+       	  height: 24px;
+       	  margin: 15px auto 8px;  /* 上15  左右自动  下8 */
+       	  background:url(../images/sprite_fs@1x.png) no-repeat;
+       } 
+        .jd_service p {
+        	text-align: center;
+        }
+  /* 右边模块结束 */
